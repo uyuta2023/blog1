@@ -1,0 +1,15 @@
+<div class='w-75 mx-auto d-flex flex-column justify-content-center'>
+    <%= form_with model: @user, local: true do |f| %>
+        <p>ユーザー登録</p>
+        <%= f.label :名前, class:'form-label' %>
+        <%= f.text_field :name, class:'form-control' %>
+        <%= f.label :メール, class:'form-label' %>
+        <%= f.email_field :email, class:'form-control' %>
+        <%= f.label :パスワード, class:'form-label' %>
+        <%= f.password_field :password, class:'form-control' %>
+        <%= f.label :パスワード（確認）, class:'form-label' %>
+        <%= f.password_field :password_confirmation, class:'form-control' %>
+        <%= f.submit '新規登録', class:'btn btn-danger' %>
+    <% end %>
+    <p>ログインは<%= link_to "こちら", new_session_path %>から</p>    
+</div>

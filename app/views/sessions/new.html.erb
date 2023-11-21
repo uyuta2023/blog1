@@ -1,0 +1,11 @@
+<div class='w-75 mx-auto d-flex flex-column justify-content-center'>
+    <%= form_with url: sessions_path, local: true do |f| %>
+        <h4>ログイン</h4>
+        <%= f.label :メール, class:'form-label' %>
+        <%= f.email_field :email, class:'form-control' %>
+        <%= f.label :パスワード, class:'form-label' %>
+        <%= f.password_field :password, class:'form-control' %>
+        <%= f.submit 'ログイン', class:'btn btn-primary' %>
+    <% end %>
+    <p>新規登録は<%= link_to "こちら", new_user_path %>から</p>
+</div>

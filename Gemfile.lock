@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
@@ -169,11 +170,13 @@ GEM
     rake (13.1.0)
     rdoc (6.6.0)
       psych (>= 4.0.0)
+    redcarpet (3.6.0)
     redis (4.8.1)
     regexp_parser (2.8.2)
     reline (0.4.0)
       io-console (~> 0.5)
     rexml (3.2.6)
+    rouge (4.2.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.15.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -215,6 +218,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
@@ -222,7 +226,9 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.8)
+  redcarpet
   redis (~> 4.0)
+  rouge
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
