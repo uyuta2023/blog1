@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     include UsersHelper
     include MarkdownsHelper
+    before_action :login_required
 
     private
 

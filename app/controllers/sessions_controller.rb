@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
+    skip_before_action :login_required
+
     # GET ログイン画面
-    def new    
+    def new        
     end
     # POST ログイン
     def create
@@ -15,10 +17,10 @@ class SessionsController < ApplicationController
             render new_session_path
         end
     end
-    # POST ログアウト
+    # DELETE ログアウト
     def destroy
         log_out if logged_in?
-        redirect_to new_user_path, status: :see_other
+        redirect_to new_session_path, status: :see_other
     end
 
 end
